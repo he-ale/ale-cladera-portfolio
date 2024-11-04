@@ -11,15 +11,21 @@ import { RouterModule } from '@angular/router';
 })
 export class NavComponentComponent {
 
-  isMenuHidden = true; 
-  bgColor: string=  "bg-white/75";
+  public isMenuHidden: boolean; 
+  public bgColor: string;
+
+
+  public constructor(){
+    this.isMenuHidden = true; 
+    this.bgColor=  "bg-white/75";
+  }
 
   @HostListener('window:scroll', [])
-  onWindowScroll() {
+  public onWindowScroll(): void {
     this.bgColor = window.scrollY > 50 ? 'bg-white border-b-[1px] border-black' : 'bg-white/75';
   }
 
-  toggleMenu() {
+  public toggleMenu(): void{
     this.isMenuHidden = !this.isMenuHidden;
   }
 }

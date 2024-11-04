@@ -1,0 +1,18 @@
+/* Asegúrate de que la transición sea suave */
+.absolute {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Si deseas que se desvanezca */
+  .inset-0 {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .inset-0.ng-enter {
+    opacity: 0;
+  }
+  
+  .inset-0.ng-enter-active {
+    opacity: 1;
+  }
