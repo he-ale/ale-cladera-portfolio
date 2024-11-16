@@ -1,14 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { NavComponentComponent } from '@shared/nav-component/nav-component.component';
+import { NavComponent } from '@shared/nav-component/nav.component';
 import { Subject, takeUntil } from 'rxjs';
 import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from "../shared/footer-component/footer.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, RouterModule, NavComponentComponent, AboutComponent],
+  imports: [CommonModule, RouterModule, NavComponent, AboutComponent, FooterComponent, ProjectsComponent],
   templateUrl: './dashboard.component.html',
   styles: ``
 })

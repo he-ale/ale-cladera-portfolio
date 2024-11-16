@@ -1,12 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host:{
+    class: 'h-screen flex items-center justify-center',
+    id: 'about'
+  }
 })
 export class AboutComponent {
   // images: string[] = [
