@@ -1,11 +1,3 @@
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
-<card-project></card-project>
+@for (project of projects; track $index) {
+    <card-project [project]="project"></card-project>
+}

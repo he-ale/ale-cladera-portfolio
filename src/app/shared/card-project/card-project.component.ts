@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, input } from '@angular/core';
+import { Project } from 'app/data/data';
 
 @Component({
   selector: 'card-project',
@@ -12,5 +13,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   }
 })
 export class CardProjectComponent {
-
+  @Input({required:true})
+  public project!: Project;
 }

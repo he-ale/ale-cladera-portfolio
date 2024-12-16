@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CardProjectComponent } from "../card-project/card-project.component";
+import { Project, projects } from 'app/data/data';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'list-project',
   standalone: true,
-  imports: [CardProjectComponent],
+  imports: [CardProjectComponent, CommonModule],
   templateUrl: './list-project.component.html',
   styleUrl: './list-project.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -13,5 +15,8 @@ import { CardProjectComponent } from "../card-project/card-project.component";
   }
 })
 export class ListProjectComponent {
-
+  public projects:Project[];
+  constructor(){
+    this.projects= projects;
+  }
 }
